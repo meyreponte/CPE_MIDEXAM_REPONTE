@@ -1,0 +1,31 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
+    - name: elastic_centos
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
+    - name: grafana_centos
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
+    - name: influxdb_centos
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
+    - name: lamp_centos
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
+    - name: prometheus_centos
+

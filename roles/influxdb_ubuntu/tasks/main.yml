@@ -1,0 +1,22 @@
+---
+- name: Add InfluxDB APT repository key
+  apt_key:
+    url: https://repos.influxdata.com/influxdb.key
+    state: present
+
+- name: Add InfluxDB APT repository
+  apt_repository:
+    repo: deb https://repos.influxdata.com/ubuntu focal stable
+    state: present
+    update_cache: yes
+
+- name: Install InfluxDB package
+  apt:
+    name: influxdb
+    state: present
+
+- name: Start InfluxDB service
+  service:
+    name: influxdb
+    state: started
+    enabled: yes

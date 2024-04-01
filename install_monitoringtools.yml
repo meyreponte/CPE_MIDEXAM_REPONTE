@@ -29,3 +29,27 @@
   roles:
     - name: prometheus_centos
 
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: elastic_ubuntu
+
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: grafana_ubuntu
+
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: influxdb_ubuntu
+
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: lamp_ubuntu
+
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: prometheus_ubuntu

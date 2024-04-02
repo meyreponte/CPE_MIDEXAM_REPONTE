@@ -27,6 +27,11 @@
 - hosts: monitoringtools_centos
   become: true
   roles:
+    - name: nagios_centos
+
+- hosts: monitoringtools_centos
+  become: true
+  roles:
     - name: prometheus_centos
 
 - hosts: monitoringtools_Ubuntu
@@ -48,6 +53,11 @@
   become: true
   roles:
     - name: lamp_ubuntu
+
+- hosts: monitoringtools_Ubuntu
+  become: true
+  roles:
+    - name: nagios_ubuntu
 
 - hosts: monitoringtools_Ubuntu
   become: true
